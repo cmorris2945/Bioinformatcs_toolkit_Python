@@ -14,3 +14,7 @@ print(validateSeq(rand_DNA_String1))
 print(validateSeq(rand_DNA_String2))
 
 print(validateSeq(random_DNA_String3))
+
+
+Test_DNA_String = validateSeq(random_DNA_String3)
+print(countNucFrequency(Test_DNA_String))
