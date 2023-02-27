@@ -1,4 +1,5 @@
 Nucleotides = ["A", "C", "G", "T"]
+import collections
 
 # Lets check the sequence to make sure it is valid...
 
@@ -12,7 +13,8 @@ def validateSeq(dna_seq):
     return temp_sequence
 
 def countNucFrequency(sequence):
-    tempFrequency_Dict = {"A": 0, "C": 0, "G": 0, "T": 0}
-    for nucleotide in sequence:
-        tempFrequency_Dict[nucleotide] += 1
-    return tempFrequency_Dict
+        tempFrequency_Dict = {"A": 0, "C": 0, "G": 0, "T": 0}
+        for nucleotide in sequence:
+            tempFrequency_Dict[nucleotide] += 1
+        return tempFrequency_Dict
+      #return dict(collections.Counter(sequence))
