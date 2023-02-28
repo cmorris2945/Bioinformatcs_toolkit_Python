@@ -9,12 +9,17 @@ random_DNA_String3 = ''.join([random.choice(Nucleotides)
 
 
 
-print(validateSeq(rand_DNA_String1))
+#print(validateSeq(rand_DNA_String1))
 
-print(validateSeq(rand_DNA_String2))
+#print(validateSeq(rand_DNA_String2))
 
-print(validateSeq(random_DNA_String3))
+#print(validateSeq(random_DNA_String3))
 
 
-Test_DNA_String = validateSeq(random_DNA_String3)
-print(countNucFrequency(Test_DNA_String))
+#Test_DNA_String = validateSeq(random_DNA_String3)
+#print(countNucFrequency(Test_DNA_String))
+
+#print(transcription((random_DNA_String3)))
+
+DNA_str = "CCATAA"
+print(reverse_compliment(DNA_str))
