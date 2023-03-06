@@ -1,7 +1,7 @@
 import collections
 
 Nucleotides = ["A", "C", "G", "T"]
-DNA_ReversCompliment = {"A": "T", "T": "A",a "G": "C", "C": "G"}
+DNA_ReversCompliment = {"A": "T", "T": "A", "G": "C", "C": "G"}
 
 # Lets check the sequence to make sure it is valid...
 
@@ -33,4 +33,3 @@ def reverse_compliment(sequence):
      return ''.join([DNA_ReversCompliment[nuc] for nuc in sequence])[::-1]
      
          
-     
