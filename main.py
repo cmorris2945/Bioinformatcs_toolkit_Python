@@ -4,23 +4,19 @@ import random
 from utilities import colored
 
 rand_DNA_String1 = "ATTGCCCGTAA"
-#rand_DNA_String2 = "ATCcCGGX"
-#random_DNA_String3 = ''.join([random.choice(Nucleotides)
-#                              for nuc in range(20)])
+rand_DNA_String2 = "ATCcCGGX"
+random_DNA_String3 = ''.join([random.choice(Nucleotides)
+                              for nuc in range(30)])
 
-DNAStr = validateSeq(rand_DNA_String1)
+DNAStr = validateSeq(random_DNA_String3)
 
 print(f'\nSequence is: colored((rand_DNA_String1)\n')
+print(f'[1] + Sequence Length: {len(DNAStr)}\n')
+print(colored(f'[2] + Nucleotide Frequency: {countNucFrequency(DNAStr)}\n'))
 
-#print(validateSeq(rand_DNA_String2))
+print(f'[3] + DNA/RNA Transcription: {colored(transcription(DNAStr))}\n')
 
-#print(validateSeq(random_DNA_String3))
+print(f"'[4] + DNA STRING + Reverse Compliment:\n5' {colored(DNAStr)} 3'")
 
-
-#Test_DNA_String = validateSeq(random_DNA_String3)
-#print(countNucFrequency(Test_DNA_String))
-
-#print(transcription((random_DNA_String3)))
-
-#DNA_str = "CCATAA"
-#print(reverse_compliment(DNA_str))
+print(f" {''.join([' |' for c in range(len(DNAStr))])}")
+print(f"3' {colored(reverse_compliment(DNAStr))} s'\n")
