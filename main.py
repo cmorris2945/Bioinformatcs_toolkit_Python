@@ -2,6 +2,7 @@
 from DNA_Funct_Tools import *
 import random
 from utilities import colored
+import structures
 
 rand_DNA_String1 = "ATTGCCCGTAA"
 rand_DNA_String2 = "ATCcCGGX"
@@ -19,4 +20,18 @@ print(f'[3] + DNA/RNA Transcription: {colored(transcription(DNAStr))}\n')
 print(f"'[4] + DNA STRING + Reverse Compliment:\n5' {colored(DNAStr)} 3'")
 
 print(f" {''.join([' |' for c in range(len(DNAStr))])}")
-print(f"3' {colored(reverse_compliment(DNAStr))} s'\n")
+#print(f"3' {colored(reverse_compliment(DNAStr))} s'\n")
+
+#print(f'[5g] + GC Content: {gc_content(random_DNA_String3)}%\n')
+
+#print(f'[6] + GC Content in Subsection k =5: {gc_content_subsec(random_DNA_String3, k=5)}')
+
+#print(f'[7] + Aminoacids Sequence from DNA: {translate_seq(DNAStr, 0)}\n')
+
+#print(f'[8] + Codon Frequency (L): {codon_usage(DNAStr, "L")}\n ')
+
+print(f'[9] + Reading_frames: ')
+
+for frame in gen_reading_frames(DNAStr):
+    print(frame)
+
