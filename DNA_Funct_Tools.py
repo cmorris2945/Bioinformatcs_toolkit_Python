@@ -71,6 +71,8 @@ def codon_usage(sequence, aminoacid):
 
 def gen_reading_frames(sequence):
      ## This function generates the 6 reading frames of a DNA Sequence, including reverse compliment...
+     #The genetic code is read in a series of three nucleotides, or codons, at a time. 
+     # Each codon specifies a particular amino acid, which is used to build the protein sequence.
      frames = []
      frames.append(translate_seq(sequence, 0))
      frames.append(translate_seq(sequence, 1))
@@ -79,6 +81,25 @@ def gen_reading_frames(sequence):
      frames.append(translate_seq(reverse_compliment(sequence), 1))
      frames.append(translate_seq(reverse_compliment(sequence), 2))
     
-
-
      return frames
+
+def proteins_from_rf(aa_seq):
+     ## This program computes all possible proteins in an amino acid sequence
+     # and returns a list of possible proteins in return...
+
+     current_protein = []
+     proteins = []
+     for aa in aa_seq:
+          if aa == "":
+               ## STOP accumulating amino acids if "_" STOP was found...
+               if current_protein:
+                    for p in current_protein:
+                         proteins.append(p)
+                    current_protein = []
+          else:
+               ## START accumulating amino acids if "M" START was found...
+               if aa == "M":
+                    current_protein.append("")
+               for i in range(len(current_protein)):
+                    current_protein[i] += aa
+     return proteins
